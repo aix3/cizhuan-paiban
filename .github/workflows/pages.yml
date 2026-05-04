@@ -19,6 +19,9 @@ jobs:
   build:
     name: 构建静态站点
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+      NPM_CONFIG_PRODUCTION: "false"
     steps:
       - name: 拉取代码
         uses: actions/checkout@v4
@@ -26,11 +29,11 @@ jobs:
       - name: 安装 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: npm
 
       - name: 安装依赖
-        run: npm ci --include=dev
+        run: npm ci
 
       - name: 运行测试
         run: npm test
