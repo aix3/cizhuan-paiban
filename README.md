@@ -78,6 +78,14 @@ npm test
 npm run build
 ```
 
+### GitHub Pages 构建
+
+```bash
+npm run build:pages
+```
+
+该命令会使用 `/cizhuan-paiban/` 作为静态资源基础路径，适合部署到 GitHub Pages。
+
 ### 本地预览构建结果
 
 ```bash
@@ -187,6 +195,7 @@ src/
 npm run dev      # 启动开发服务器
 npm test         # 运行单元测试
 npm run build    # 类型检查并构建生产版本
+npm run build:pages # 构建 GitHub Pages 版本
 npm run preview  # 预览生产构建
 ```
 
